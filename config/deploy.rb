@@ -8,8 +8,5 @@ set :copy_exclude, ['.git', '.DS_Store', '.gitignore', '.gitmodules']
 set :keep_releases, 5
 set :use_sudo, false
 
-# Relativ to wp-content
-set :theme_path, 'themes/your_theme'
-
 after 'deploy:cleanup'
 after 'shared:make_symlink'

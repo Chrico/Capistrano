@@ -10,5 +10,5 @@ set :copy_exclude, ['.git', '.DS_Store', '.gitignore', '.gitmodules']
 set :keep_releases, 5
 set :use_sudo, false
 
-after 'deploy:cleanup'
-after 'shared:make_symlink'
+after 'deploy:update', 'deploy:cleanup'
+after 'deploy:update_code', 'shared:make_symlink'
